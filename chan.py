@@ -151,7 +151,7 @@ if Budget < Value:
     print(f"Club: {Club}")
     print(f"Price: €{Value}M")
     print(f"Your budget: €{Budget}M")
-    print("Transfer Status: NOT ENOUGH MONEY")
+    print("Transfer Status: INSUFFICIENT BUDGET")
     raise SystemExit
 
 remaining_budget = Budget - Value
@@ -202,17 +202,17 @@ tvs *= team_coefficient * age_coefficient * superstar_multiplier
 # 8. RECOMMENDATION & REASON (Có vùng đệm Borderline)
 # =========================
 if tvs >= 42:
-    recommendation = "RẤT ĐÁNG MUA (Highly Recommended)"
-    reason = "Hiệu năng (TVS) vượt trội, mức đầu tư mang lại giá trị sử dụng cực kỳ cao."
+    recommendation = "HIGHLY RECOMMENDED"
+    reason = "Exceptional performance score (TVS), offering outstanding value for the investment."
 elif 38 <= tvs < 42:
-    recommendation = "CÂN NHẮC KỸ - TIỆM CẬN NGƯỠNG (Borderline / Consider+)"
-    reason = "TVS nằm sát ngưỡng cao, cần trinh sát thêm phong độ thực tế trước khi chốt."
+    recommendation = "BORDERLINE / CONSIDER+"
+    reason = "TVS is close to the upper threshold. Further scouting of recent form is recommended before making a final decision."
 elif 20 <= tvs < 38:
-    recommendation = "CÂN NHẮC MUA (Consider)"
-    reason = "Hiệu năng ở mức ổn định, phù hợp với mức giá chuyển nhượng tầm trung."
+    recommendation = "CONSIDER"
+    reason = "Solid performance value, potentially suitable for a mid-range transfer budget."
 else:
-    recommendation = "KHÔNG NÊN MUA (Not Recommended)"
-    reason = "TVS thấp, giá trị chuyển nhượng quá đắt đỏ so với đóng góp thực tế."
+    recommendation = "NOT RECOMMENDED"
+    reason = "Low TVS indicates that the transfer fee may be excessive relative to the player's actual contribution."
 
 # =========================
 # 9. OUTPUT REPORT
